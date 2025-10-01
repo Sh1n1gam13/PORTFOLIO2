@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Triangle Classification Program</title>
+</head>
+<body>
+    <h1>Triangle Classification Program</h1>
+    <p>This program will determine if a triangle is equilateral, scalene, or isosceles based on the length of its sides.</p>
+    <button onclick="classifyTriangle()">Start Triangle Classification</button>
+
+    <script>
+        function determineTriangle(a, b, c) {
+            // Convert string inputs to numbers
+            a = parseFloat(a);
+            b = parseFloat(b);
+            c = parseFloat(c);
+            
+            // Check if all three sides are equal (Equilateral)
+            if (a === b && b === c) {
+                window.alert("The triangle is EQUILATERAL.");
+            }
+            // Check if only two sides are equal (Isosceles)
+            else if (a === b || b === c || a === c) {
+                window.alert("The triangle is ISOSCELES.");
+            }
+            // If no sides are equal (Scalene)
+            else {
+                window.alert("The triangle is SCALENE.");
+            }
+        }
+
+        function classifyTriangle() {
+            // Prompt user for three sides and validate input
+            var a, b, c;
+            
+            // Get first side
+            do {
+                a = prompt("Enter the length of the first side:");
+                if (a === null) return; // User cancelled
+                if (isNaN(a) || a === "" || parseFloat(a) <= 0) {
+                    alert("Please enter a valid positive number.");
+                }
+            } while (isNaN(a) || a === "" || parseFloat(a) <= 0);
+            
+            // Get second side
+            do {
+                b = prompt("Enter the length of the second side:");
+                if (b === null) return; // User cancelled
+                if (isNaN(b) || b === "" || parseFloat(b) <= 0) {
+                    alert("Please enter a valid positive number.");
+                }
+            } while (isNaN(b) || b === "" || parseFloat(b) <= 0);
+            
+            // Get third side
+            do {
+                c = prompt("Enter the length of the third side:");
+                if (c === null) return; // User cancelled
+                if (isNaN(c) || c === "" || parseFloat(c) <= 0) {
+                    alert("Please enter a valid positive number.");
+                }
+            } while (isNaN(c) || c === "" || parseFloat(c) <= 0);
+            
+            // Call the triangle determination function
+            determineTriangle(a, b, c);
+        }
+    </script>
+</body>
+</html>
