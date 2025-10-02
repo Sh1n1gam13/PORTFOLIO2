@@ -586,7 +586,16 @@
             color: var(--text-secondary);
             font-size: 1rem;
         }
+.contact-item a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
 
+.contact-item a:hover {
+    color: var(--accent-violet);
+    text-decoration: underline;
+}
         /* Enhanced upload section */
         .upload-section {
             background: var(--card-bg);
@@ -965,6 +974,7 @@
                 </div>
 
                 <div class="portfolio-item">
+                    <a href="Activity3.3_TriangleClassification.html" class="portfolio-link">
                    <div class="portfolio-img"style="background: url('Activity 3.png') center/cover;"></div>
                     <div class="portfolio-content">
                         <h3>Activity 3</h3>
@@ -986,12 +996,7 @@
         <div class="container">
             <h2 class="section-title">Upload New Work</h2>
             
-            <!-- GitHub Integration Notice -->
-            <div class="github-notice">
-                <h4>🔗 GitHub Integration Active</h4>
-                <p>This portfolio is connected to your GitHub repository. All changes will be automatically synchronized and deployed to Netlify.</p>
-                <p><strong>Repository:</strong> github.com/Sh1n1gam13/portfolio</p>
-            </div>
+           
 
             <div class="upload-section">
                 <div class="upload-area" onclick="document.getElementById('fileInput').click()">
@@ -1019,11 +1024,11 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <h3>📧 Email</h3>
-                    <p>s.brentwarren.morta@sccr.edu</p>
+                    <p><a href="mail to:s.brentwarren.morta@sccr.edu">s.brentwarren.morta@sccr.edu</a></p>
                 </div>
                 <div class="contact-item">
                     <h3>📱 Phone</h3>
-                    <p>09556273936</p>
+                    <p><a href="tel:09556273936">09556273936</a></p>
                 </div>
                 <div class="contact-item">
                     <h3>🌐 LinkedIn</h3>
@@ -1031,7 +1036,7 @@
                 </div>
                 <div class="contact-item">
                     <h3>💻 GitHub</h3>
-                    <p>github.com/Sh1n1gam13</p>
+                    <p><a href="https://github.com/Sh1n1gam13" target="_blank">github.com/Sh1n1gam13</a></p>
                 </div>
             </div>
         </div>
@@ -1125,12 +1130,7 @@
             }
         }
 
-        // Enhanced profile image upload - REMOVED since you'll manually replace the image
-        // Just keep the popup functionality
         
-        // Profile popup functionality remains the same
-
-        // Enhanced upload project function with GitHub simulation
         async function uploadProject() {
             const title = document.getElementById('projectTitle').value;
             const description = document.getElementById('projectDescription').value;
